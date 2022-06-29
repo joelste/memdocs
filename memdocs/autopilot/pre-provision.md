@@ -80,13 +80,13 @@ Before starting the pre-provisioning process in the provisioning service facilit
 The Windows Autopilot for pre-provisioned deployment pre-provisioning process will apply all device-targeted policies from Intune. That includes certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps will be installed if they meet these two conditions:
 
 - Configured to install in the device context.
-- Targeted to the user pre-assigned to the Autopilot device.
+- Targeted to the user pre-assigned to the Autopilot device (after user sign-in).
 
 > [!IMPORTANT]
 > Make sure not to target both win32 and LOB apps to the same device.
 
 > [!NOTE]
-> Select the language mode as user specified in Autopilot profiles to ensure easy access into pre-provisioning mode. The pre-provisioning technician phase will install all device-targeted apps and any user-targeted, device-context apps that are targeted to the assigned user. If there is no assigned user, then it will only install the device-targeted apps. Other user-targeted policies will not apply until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.
+> Select the language mode as user specified in Autopilot profiles to ensure easy access into pre-provisioning mode. The pre-provisioning technician phase will install all device-targeted apps. User-targeted policies and apps will not apply until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.
 
 ## Scenarios
 
